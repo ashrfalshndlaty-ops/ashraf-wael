@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hours</title>
+   <link rel="stylesheet" href="a.Css">
+
+</head>
+<body>
+    <h2 id="watch">00:00:00</h2>
+<script>
+let watch = document.getElementById("watch");
+
+   let clock = setInterval(()=>{
+     let date = new Date();
+     let hours = date.getHours();
+     let Minetes = date.getMinutes();
+     let Seconds = date.getSeconds();
+
+   hours=hours<10?"0"+hours:hours;
+   Minetes=Minetes<10?"0"+Minetes:Minetes;
+   Seconds=Seconds<10?"0"+Seconds:Seconds;
+   document.getElementById("watch").innerHTML=hours+":"+Minetes+":"+Seconds
+   
+   },1000)
+
+
+</script>
+
+
+</body>
+
+
+</html>
